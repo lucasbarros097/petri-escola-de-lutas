@@ -11,6 +11,11 @@ const imageModules = import.meta.glob<{ default: string }>(
 
 export type CategoryId = 'todas' | 'jiu' | 'thai' | 'boxe' | 'femininas';
 
+export interface GalleryItem {
+  src: string;
+  isWide?: boolean;
+}
+
 export interface Category {
   id: CategoryId;
   label: string;
@@ -26,8 +31,18 @@ export const categories: Category[] = [
   { id: 'femininas', label: 'Femininas', color: '#ec4899', glow: 'rgba(236, 72, 153, 0.3)' },
 ];
 
-function buildGallery(): Record<string, string[]> {
-  const result: Record<string, string[]> = {
+const WIDE_IMAGES = new Set([
+  'boxe1.jpeg',
+  'thai4.jpg',
+  'thai6.jpeg',
+  'fem4.jpeg',
+  'fem9.jpeg',
+  'fem10.jpeg',
+  'fem11.jpeg',
+]);
+
+function buildGallery(): Record<string, GalleryItem[]> {
+  const result: Record<string, GalleryItem[]> = {
     jiu: [],
     thai: [],
     boxe: [],
@@ -49,14 +64,19 @@ function buildGallery(): Record<string, string[]> {
     // Pula boxe1.jpg (logo legado) caso exista
     if (filename === 'boxe1.jpg') continue;
 
+    const item: GalleryItem = {
+      src: mod.default,
+      isWide: WIDE_IMAGES.has(filename),
+    };
+
     if (filename.startsWith('fem') || filename.startsWith('fm') || filename.startsWith('feminina')) {
-      result.femininas.push(mod.default);
+      result.femininas.push(item);
     } else if (filename.startsWith('thai')) {
-      result.thai.push(mod.default);
+      result.thai.push(item);
     } else if (filename.startsWith('boxe')) {
-      result.boxe.push(mod.default);
+      result.boxe.push(item);
     } else if (filename.startsWith('jiu')) {
-      result.jiu.push(mod.default);
+      result.jiu.push(item);
     }
   }
 
@@ -66,7 +86,7 @@ function buildGallery(): Record<string, string[]> {
 export const galleryImages = buildGallery();
 
 /** Retorna a lista plana de todas as imagens (para a tab "Tudo") */
-export function getAllImages(): string[] {
+export function getAllImages(): GalleryItem[] {
   return [
     ...galleryImages.thai,
     ...galleryImages.boxe,

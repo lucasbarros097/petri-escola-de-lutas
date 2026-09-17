@@ -1,16 +1,16 @@
 import { useRef, useState, useMemo, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ImageIcon } from 'lucide-react';
-import { categories, galleryImages, getAllImages, type CategoryId } from '../data/gallery';
+import { categories, galleryImages, getAllImages, type CategoryId, type GalleryItem } from '../data/gallery';
 
 // ==========================================
 // Grupo de imagens (repetido 3x para loop)
 // ==========================================
-const GalleryGroup = ({ images }: { images: string[] }) => (
+const GalleryGroup = ({ images }: { images: GalleryItem[] }) => (
   <div style={{ display: 'flex', gap: '24px', flexShrink: 0, paddingRight: '24px' }}>
-    {images.map((img, idx) => (
-      <div key={idx} className="gallery-card">
+    {images.map((item, idx) => (
+      <div key={idx} className={`gallery-card ${item.isWide ? 'gallery-card--wide' : ''}`}>
         <img
-          src={img}
+          src={item.src}
           alt={`Galeria ${idx + 1}`}
           loading="lazy"
           className="gallery-card__img"
