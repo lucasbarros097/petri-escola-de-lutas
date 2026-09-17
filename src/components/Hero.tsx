@@ -29,31 +29,72 @@ const Hero = () => {
           A verdadeira força nasce da disciplina. Junte-se a nós e transforme
           corpo e mente com os melhores profissionais da região.
         </p>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center', width: '100%', marginTop: '16px' }}>
-          {/* Layout em Grid para padronizar a largura dos botões rigorosamente */}
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
-            gap: '16px', 
-            width: '100%', 
-            maxWidth: '650px',
-            justifyContent: 'center'
-          }}>
-            <a href="https://wa.me/5519996748346?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20agendar%20uma%20aula%20experimental%20em%20sua%20academia." target="_blank" rel="noopener noreferrer" className="hero__cta" style={{ background: 'var(--color-neon)', color: 'var(--color-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', width: '100%' }}>
-              <MessageCircle size={20} /> Sou aluno novo
-            </a>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', alignItems: 'center', width: '100%', maxWidth: '310px', marginTop: '16px' }}>
+          <a
+            href="https://wa.me/5519996748346?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20agendar%20uma%20aula%20experimental%20em%20sua%20academia."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero__cta"
+            style={{
+              background: 'var(--color-neon)',
+              color: 'var(--color-bg)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '10px',
+              width: '100%',
+              padding: '12px 16px',
+              fontSize: '0.78rem',
+              boxSizing: 'border-box',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            <MessageCircle size={18} /> Marque uma aula experimental
+          </a>
 
-            <a href="https://wa.me/5519996748346?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20hor%C3%A1rio%20para%20aula%20com%20personal." target="_blank" rel="noopener noreferrer" className="hero__cta" style={{ background: 'rgba(10,10,10,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', width: '100%' }}>
-              <User size={20} /> Agendamento Personal
-            </a>
+          <a
+            href="https://wa.me/5519996748346?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20hor%C3%A1rio%20para%20aula%20com%20personal."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero__cta"
+            style={{
+              background: 'rgba(10,10,10,0.6)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '10px',
+              width: '100%',
+              padding: '12px 16px',
+              fontSize: '0.78rem',
+              boxSizing: 'border-box',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            <User size={18} /> Agendamento Personal
+          </a>
 
-            {/* O terceiro botão ocupa a linha inteira (centralizado) mas com tamanho máximo padronizado */}
-            <div style={{ gridColumn: '1 / -1', display: 'flex', justifyContent: 'center' }}>
-              <a href="https://www.google.com/maps/search/?api=1&query=R.+Volunt%C3%A1rios+de+Piracicaba%2C+253+-+Centro%2C+Piracicaba+-+SP%2C+13400-290" target="_blank" rel="noopener noreferrer" className="hero__cta" style={{ background: 'transparent', borderColor: 'var(--color-text-muted)', color: 'var(--color-text)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', width: '100%', maxWidth: '309px' }}>
-                <MapPin size={20} /> Como chegar
-              </a>
-            </div>
-          </div>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=R.+Volunt%C3%A1rios+de+Piracicaba%2C+253+-+Centro%2C+Piracicaba+-+SP%2C+13400-290"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero__cta"
+            style={{
+              background: 'transparent',
+              borderColor: 'var(--color-text-muted)',
+              color: 'var(--color-text)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '10px',
+              width: '100%',
+              padding: '12px 16px',
+              fontSize: '0.78rem',
+              boxSizing: 'border-box',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            <MapPin size={18} /> Como chegar
+          </a>
         </div>
       </div>
     </section>
