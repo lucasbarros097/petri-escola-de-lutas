@@ -1,30 +1,31 @@
 import { MessageCircle, User, MapPin } from 'lucide-react';
+import punhoImg from '../assets/punho.png';
 
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="hero__content glass" style={{ padding: '60px 40px', borderRadius: '24px', background: 'rgba(10, 10, 10, 0.4)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="hero__content glass" style={{ padding: '40px 28px', borderRadius: '24px', background: 'rgba(10, 10, 10, 0.5)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5)', display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '580px' }}>
         
-        {/* Imagem do punho perfeitamente isolada em PNG transparente */}
+        {/* Imagem do punho perfeitamente dimensionada e importada via asset */}
         <div style={{
-          width: '260px',
-          height: '190px',
+          width: '160px',
+          height: '115px',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          marginBottom: '24px',
-          filter: 'drop-shadow(0 0 20px rgba(85, 255, 0, 0.4))' // Brilho em volta da mão isolada
+          marginBottom: '16px',
+          filter: 'drop-shadow(0 0 16px rgba(85, 255, 0, 0.4))'
         }}>
-          <img src="/punho.png" alt="Petri Punho" style={{ 
+          <img src={punhoImg} alt="Petri Punho" style={{ 
             width: '100%', 
             height: '100%', 
-            objectFit: 'contain',
-            filter: 'brightness(0) invert(1)' // Converte a imagem extraída em branco sólido (flat) igual às letras
+            objectFit: 'contain', 
+            filter: 'brightness(0) invert(1)'
           }} />
         </div>
 
-        <h2 className="hero__subtitle" style={{ fontStyle: 'italic', transform: 'skewX(-12deg)', marginTop: '0', letterSpacing: '0.2em' }}>Escola de <span style={{ color: 'var(--color-neon)' }}>Lutas</span></h2>
-        <p className="hero__text">
+        <h2 className="hero__subtitle" style={{ fontStyle: 'italic', transform: 'skewX(-12deg)', marginTop: '0', letterSpacing: '0.15em', fontSize: 'clamp(1.5rem, 3.5vw, 2rem)', marginBottom: '12px' }}>Escola de <span style={{ color: 'var(--color-neon)' }}>Lutas</span></h2>
+        <p className="hero__text" style={{ fontSize: '0.925rem', lineHeight: '1.6', marginBottom: '24px', maxWidth: '440px' }}>
           A verdadeira força nasce da disciplina. Junte-se a nós e transforme
           corpo e mente com os melhores profissionais da região.
         </p>

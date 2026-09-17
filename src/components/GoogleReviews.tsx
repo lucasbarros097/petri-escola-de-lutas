@@ -74,35 +74,35 @@ const ReviewGroup = () => (
         className="glass" 
         style={{ 
           flex: '0 0 auto', 
-          width: '320px', 
-          padding: '24px', 
-          borderRadius: '24px', 
+          width: '270px', 
+          padding: '18px 20px', 
+          borderRadius: '18px', 
           display: 'flex', 
           flexDirection: 'column', 
-          gap: '16px',
-          boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
+          gap: '12px',
+          boxShadow: '0 8px 24px rgba(0,0,0,0.25)',
           transition: 'transform 0.4s',
           cursor: 'default'
         }}
         onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'} 
         onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--color-neon)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-bg)', fontWeight: 'bold', fontSize: '1.2rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <div style={{ width: '34px', height: '34px', borderRadius: '50%', background: 'var(--color-neon)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-bg)', fontWeight: 'bold', fontSize: '1rem' }}>
             {review.name.charAt(0)}
           </div>
           <div>
-            <h4 style={{ margin: 0, fontSize: '1rem', color: 'var(--color-text)' }}>{review.name}</h4>
-            <div style={{ display: 'flex', color: '#fbbf24', marginTop: '4px' }}>
+            <h4 style={{ margin: 0, fontSize: '0.925rem', color: 'var(--color-text)' }}>{review.name}</h4>
+            <div style={{ display: 'flex', color: '#fbbf24', marginTop: '2px' }}>
               {[...Array(review.rating)].map((_, i) => (
-                <svg key={i} xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <svg key={i} xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none">
                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                 </svg>
               ))}
             </div>
           </div>
         </div>
-        <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.6', fontSize: '0.95rem', margin: 0, fontStyle: 'italic' }}>
+        <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.5', fontSize: '0.875rem', margin: 0, fontStyle: 'italic' }}>
           "{review.text}"
         </p>
       </div>

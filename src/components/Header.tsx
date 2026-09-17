@@ -1,11 +1,13 @@
 
 
+import logoImg from '../assets/images/logo.jpg';
+
 const Header = () => {
   return (
     <header className="header">
       <div className="container header__inner">
         <div className="header__logo">
-          <img src="/logo.jpg" alt="Petri Lutas Logo" style={{ width: '40px', height: '40px', borderRadius: '50%' }} />
+          <img src={logoImg} alt="Petri Lutas Logo" style={{ width: '36px', height: '36px', borderRadius: '50%', objectFit: 'cover' }} />
           <span>ESCOLA DE <span className="header__logo-accent">LUTAS</span></span>
         </div>
         <nav className="header__nav">

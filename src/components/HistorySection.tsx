@@ -30,8 +30,8 @@ const HistorySection = () => {
               className={`glass modality-card ${themeMap[sport.id] || ''}`}
             >
               {imageMap[sport.id] && (
-                <div className="modality-card__image" style={{ display: 'flex', justifyContent: 'center', padding: '20px', background: 'rgba(0,0,0,0.2)' }}>
-                  <img src={imageMap[sport.id]} alt={sport.name} style={{ width: '120px', height: '120px', objectFit: 'contain', borderRadius: '50%' }} />
+                <div className="modality-card__image" style={{ display: 'flex', justifyContent: 'center', padding: '16px', background: 'rgba(0,0,0,0.2)' }}>
+                  <img src={imageMap[sport.id]} alt={sport.name} style={{ width: '85px', height: '85px', objectFit: 'cover', borderRadius: '50%' }} />
                 </div>
               )}
 
