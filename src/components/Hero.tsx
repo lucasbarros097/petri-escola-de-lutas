@@ -1,26 +1,29 @@
 import { MessageCircle, User, MapPin } from 'lucide-react';
-import punhoImg from '../assets/punho.png';
+import logoImg from '../assets/images/logo.jpg';
 
 const Hero = () => {
   return (
     <section className="hero">
       <div className="hero__content glass" style={{ padding: '40px 28px', borderRadius: '24px', background: 'rgba(10, 10, 10, 0.5)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5)', display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '580px' }}>
         
-        {/* Imagem do punho perfeitamente dimensionada e importada via asset */}
+        {/* Logo oficial circular idêntica à do cabeçalho */}
         <div style={{
-          width: '160px',
-          height: '115px',
+          width: '130px',
+          height: '130px',
+          borderRadius: '50%',
+          overflow: 'hidden',
+          marginBottom: '18px',
+          boxShadow: '0 0 24px rgba(162, 243, 0, 0.35)',
+          border: '2px solid var(--color-neon)',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          marginBottom: '16px',
-          filter: 'drop-shadow(0 0 16px rgba(85, 255, 0, 0.4))'
+          flexShrink: 0
         }}>
-          <img src={punhoImg} alt="Petri Punho" style={{ 
+          <img src={logoImg} alt="Petri Escola de Lutas" style={{ 
             width: '100%', 
             height: '100%', 
-            objectFit: 'contain', 
-            filter: 'brightness(0) invert(1)'
+            objectFit: 'cover'
           }} />
         </div>
 
@@ -44,12 +47,13 @@ const Hero = () => {
               gap: '10px',
               width: '100%',
               padding: '12px 16px',
-              fontSize: '0.78rem',
+              fontSize: '0.82rem',
+              letterSpacing: '0.04em',
               boxSizing: 'border-box',
               whiteSpace: 'nowrap',
             }}
           >
-            <MessageCircle size={18} /> Marque uma aula experimental
+            <MessageCircle size={18} /> Agendar Aula Experimental
           </a>
 
           <a
@@ -65,12 +69,13 @@ const Hero = () => {
               gap: '10px',
               width: '100%',
               padding: '12px 16px',
-              fontSize: '0.78rem',
+              fontSize: '0.82rem',
+              letterSpacing: '0.04em',
               boxSizing: 'border-box',
               whiteSpace: 'nowrap',
             }}
           >
-            <User size={18} /> Agendamento Personal
+            <User size={18} /> Agendar Personal
           </a>
 
           <a
@@ -88,12 +93,13 @@ const Hero = () => {
               gap: '10px',
               width: '100%',
               padding: '12px 16px',
-              fontSize: '0.78rem',
+              fontSize: '0.82rem',
+              letterSpacing: '0.04em',
               boxSizing: 'border-box',
               whiteSpace: 'nowrap',
             }}
           >
-            <MapPin size={18} /> Como chegar
+            <MapPin size={18} /> Como Chegar
           </a>
         </div>
       </div>
