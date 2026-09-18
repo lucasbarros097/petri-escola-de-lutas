@@ -30,11 +30,8 @@ const Header = () => {
           <img
             src={logoImg}
             alt="Petri Lutas Logo"
-            style={{ width: '36px', height: '36px', borderRadius: '50%', objectFit: 'cover' }}
+            style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--color-neon)' }}
           />
-          <span>
-            ESCOLA DE <span className="header__logo-accent">LUTAS</span>
-          </span>
         </div>
 
         {/* Desktop Navigation */}
