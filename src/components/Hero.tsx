@@ -8,13 +8,13 @@ const Hero = () => {
         
         {/* Logo oficial circular idêntica à do cabeçalho */}
         <div style={{
-          width: '130px',
-          height: '130px',
+          width: '170px',
+          height: '170px',
           borderRadius: '50%',
           overflow: 'hidden',
-          marginBottom: '18px',
-          boxShadow: '0 0 24px rgba(162, 243, 0, 0.35)',
-          border: '2px solid var(--color-neon)',
+          marginBottom: '24px',
+          boxShadow: '0 0 32px rgba(162, 243, 0, 0.45)',
+          border: '3px solid var(--color-neon)',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -26,8 +26,6 @@ const Hero = () => {
             objectFit: 'cover'
           }} />
         </div>
-
-        <h2 className="hero__subtitle" style={{ fontStyle: 'italic', transform: 'skewX(-12deg)', marginTop: '0', letterSpacing: '0.15em', fontSize: 'clamp(1.5rem, 3.5vw, 2rem)', marginBottom: '12px' }}>Escola de <span style={{ color: 'var(--color-neon)' }}>Lutas</span></h2>
         <p className="hero__text" style={{ fontSize: '0.925rem', lineHeight: '1.6', marginBottom: '24px', maxWidth: '440px' }}>
           A verdadeira força nasce da disciplina. Junte-se a nós e transforme
           corpo e mente com os melhores profissionais da região.
