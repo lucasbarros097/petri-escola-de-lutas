@@ -26,7 +26,6 @@ export interface Category {
 export const categories: Category[] = [
   { id: 'todas', label: 'Tudo', color: 'var(--color-neon)', glow: 'var(--color-neon-glow)' },
   { id: 'jiu', label: 'Jiu-Jitsu', color: 'var(--color-jiu)', glow: 'var(--color-jiu-glow)' },
-  { id: 'boxe', label: 'Boxe', color: 'var(--color-boxe)', glow: 'var(--color-boxe-glow)' },
   { id: 'thai', label: 'Muay Thai', color: 'var(--color-thai)', glow: 'var(--color-thai-glow)' },
   { id: 'femininas', label: 'Femininas', color: '#ec4899', glow: 'rgba(236, 72, 153, 0.3)' },
 ];

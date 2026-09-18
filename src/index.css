@@ -208,6 +208,90 @@ button { font-family: inherit; }
   .header__nav { display: flex; }
 }
 
+/* Botão Hambúrguer Mobile */
+.header__mobile-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  padding: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.header__mobile-toggle:hover {
+  border-color: var(--color-neon);
+  color: var(--color-neon);
+  background: rgba(162, 243, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .header__mobile-toggle {
+    display: none;
+  }
+}
+
+/* Overlay e Drawer Mobile */
+.header__mobile-overlay {
+  position: fixed;
+  top: 69px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.header__mobile-drawer {
+  background: rgba(12, 12, 12, 0.96);
+  border-bottom: 2px solid var(--color-neon);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.9), 0 0 24px rgba(162, 243, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4) var(--space-6);
+  gap: var(--space-2);
+  animation: slideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header__mobile-link {
+  display: block;
+  padding: 14px 16px;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.header__mobile-link:hover,
+.header__mobile-link:active {
+  background: rgba(162, 243, 0, 0.12);
+  color: var(--color-neon);
+  padding-left: 22px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-15px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
 /* ==========================================
    HERO
    ========================================== */

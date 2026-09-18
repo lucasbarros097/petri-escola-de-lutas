@@ -31,7 +31,7 @@ const Hero = () => {
         </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', alignItems: 'center', width: '100%', maxWidth: '310px', marginTop: '16px' }}>
           <a
-            href="https://wa.me/5519996748346?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20agendar%20uma%20aula%20experimental%20em%20sua%20academia."
+            href="https://wa.me/5519996748346?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20agendar%20uma%20aula%20experimental."
             target="_blank"
             rel="noopener noreferrer"
             className="hero__cta"
